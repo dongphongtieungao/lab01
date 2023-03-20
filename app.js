@@ -16,11 +16,11 @@ app.get('/', (req, res) => {
      
     const ipAddress = IP.address();
     con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
+        //if (err) throw err;
+        //console.log("Connected!");
         var sql = "INSERT INTO ip (name) VALUES ('"+ipAddress+"')";
         con.query(sql, function (err, result) {
-          if (err) throw err;
+          //if (err) throw err;
           sql = "SELECT COUNT(*) AS namesCount FROM ip"; 
           con.query(sql, function (err, result) {
             if (err) throw err; 
