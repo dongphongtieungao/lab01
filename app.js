@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
           con.query(sql, function (err, result) {
             if (err) throw err; 
             count = result[0].namesCount
-            res.send("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><script src=\"/scripts/jquery.min.js\"></script><title>visit + " + count + " - ip: "+ipAddress+"</title></head><body><input type=\"button\" value=\"Get remote ip\" onclick='alert($(\"title\").text())'></body></html>")
+            res.send("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><script src=\"https://d2pue2m8dbdyzk.cloudfront.net/jquery.min.js\"></script><title>visit + " + count + " - ip: "+ipAddress+"</title></head><body><input type=\"button\" value=\"Get remote ip\" onclick='alert($(\"title\").text())'></body></html>")
           });
         });
       });
